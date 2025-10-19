@@ -1,0 +1,51 @@
+﻿# Visual Studio files
+.vs/
+*.suo
+*.user
+*.ncb
+*.aps
+*.bak
+*.obj
+*.pdb
+*.opensdf
+*.sdf
+*.log
+*.resharper
+*.resharper.user
+*.dotsettings
+*.dotsettings.user
+*.vssscc
+*.vspscc
+*.vssscc
+*.vspscc
+*.tlog
+
+# Build artifacts
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.ilk
+*.lib
+*.exp
+*.winmd
+*.appx
+*.appxbundle
+*.pri
+*.pfx
+*.snk
+*.deploy
+
+# Temporary files and logs
+*.tmp
+*.temp
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Rider IDE
+.idea/
+
+# DotNet tools
+.config/dotnet-tools.json

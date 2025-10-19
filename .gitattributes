@@ -1,0 +1,32 @@
+﻿# Set default behavior to automatically normalize line endings for text files.
+# This prevents issues when collaborators use different operating systems (Windows/Linux/macOS).
+* text=auto
+
+# Explicitly define C# files as text and use the 'csharp' diff driver for better diffing.
+*.cs text diff=csharp
+
+# Explicitly define solution and project files as text.
+*.sln text
+*.csproj text
+*.vbproj text
+*.fsproj text
+
+# Treat common image and binary file types as binary to prevent line ending conversion.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.bmp binary
+*.ico binary
+*.dll binary
+*.exe binary
+*.pdb binary
+*.zip binary
+*.rar binary
+*.7z binary
+
+# Optional: If working with Unity, configure YAML files for proper merging.
+# This requires a merge tool like UnityYAMLMerge to be configured in Git.
+#*.unity merge=unityyamlmerge
+#*.prefab merge=unityyamlmerge
+#*.asset merge=unityyamlmerge
