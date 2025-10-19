@@ -1,0 +1,7 @@
+﻿use Entity Framework Power Tools vs extension for scafold.  
+  
+and Entity Framework Power Pack for postgres-scafold...  
+  
+Right btn on DAL-project, EFPT, configure connection to db (like localhost, 5432, user/password of db) and upd...  
+  
+Context classes are auto-generated... DB-FIRST!!!

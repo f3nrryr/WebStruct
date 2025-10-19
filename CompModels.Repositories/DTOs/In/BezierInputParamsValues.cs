@@ -8,7 +8,7 @@ namespace CompModels.Repositories.DTOs.In
 {
     public class BezierInputParamsValues : InputParamsValuesBase
     {
-        public double DesiredPorosity { get; set; }
+        public float DesiredPorosity { get; set; }
         public int FibreDiameter { get; set; }
     }
 }

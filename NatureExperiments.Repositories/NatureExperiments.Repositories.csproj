@@ -7,15 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Converters\" />
+    <Folder Include="DTOs\In\" />
+    <Folder Include="DTOs\Out\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CompModels.DAL\CompModels.DAL.csproj" />
+    <ProjectReference Include="..\NatureExperiments.DAL\NatureExperiments.DAL.csproj" />
   </ItemGroup>
 
 </Project>

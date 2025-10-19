@@ -17,6 +17,6 @@ namespace CompModels.Repositories.DTOs
 
 
         public int UserRequesterId;
-        public DateTime RequestedAtUTC { get; set; }
+        public DateTime RequestedAt { get; set; }
     }
 }

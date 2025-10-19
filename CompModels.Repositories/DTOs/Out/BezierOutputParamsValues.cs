@@ -8,6 +8,6 @@ namespace CompModels.Repositories.DTOs.Out
 {
     public class BezierOutputParamsValues
     {
-        public double CalcResultPorosity { get; set; }
+        public float CalcResultPorosity { get; set; }
     }
 }

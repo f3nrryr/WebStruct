@@ -3,6 +3,7 @@ using CompModels.Repositories.DTOs.In;
 using CompModels.Repositories.Interfaces;
 using CompModels.Repositories.Repositories;
 using CompModels.Shared.Common.Enums;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,13 +27,13 @@ namespace CompModels.CRUD.Services.Services
             _dbConnections = dbConnections.Value;
         }
 
-        public async Task<int> 
+        public async Task<long> 
             AddCalculationRequestAsync
             (int compModelId, string inputJSON)
         {
             //todo: валидация типа не отриц параметры и т.п. иначе custom exception.
 
-            int calculationRequestId = -1;
+            long calculationRequestId = -1;
 
             switch ((AlgorithmsEnum)compModelId)
             {
@@ -41,7 +42,7 @@ namespace CompModels.CRUD.Services.Services
                     if (bezierModelInput == null || bezierModelInput?.X == null)
                         throw new UsefulException(HttpStatusCode.BadRequest, "Плохой запрос...");
 
-                    calculationRequestId = new BezierRepository().AddCalculationRequest(bezierModelInput);
+                    calculationRequestId = new BezierRepository(_dbConnections.PG_ConnectionString).AddCalculationRequest(bezierModelInput);
 
                     break;
 
@@ -52,17 +53,19 @@ namespace CompModels.CRUD.Services.Services
             return calculationRequestId;
         }
 
-        public async Task<int> 
+        public async Task<short> 
             GetCalculationRequestStatusIdAsync
             (int compModelId, int calculationRequestId, int userRequesterId)
         {
-            int calculationRequestStatusId = -1;
+            short calculationRequestStatusId = -1;
 
             switch ((AlgorithmsEnum)compModelId)
             {
                 case AlgorithmsEnum.Bezier:
 
-                    calculationRequestId = new BezierRepository().();
+                    calculationRequestId = await new BezierRepository(_dbConnections.PG_ConnectionString)
+                                           .GetCalculationRequestStatusIdAsync
+                                           (calculationRequestId, userRequesterId);
 
                     break;
 
@@ -83,7 +86,9 @@ namespace CompModels.CRUD.Services.Services
             {
                 case AlgorithmsEnum.Bezier:
 
-                    calculationRequestId = new BezierRepository().();
+                    compExpOutputJSON = await new BezierRepository(_dbConnections.PG_ConnectionString)
+                                        .GetFinishedCalculationOutputAsync
+                                        (calculationRequestId, userRequesterId);
 
                     break;
 

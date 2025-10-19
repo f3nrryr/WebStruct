@@ -10,6 +10,10 @@ namespace CompModels.Repositories.Interfaces
 {
     public interface IBezierRepository
     {
-        int AddCalculationRequest(BezierInputParamsValues input);
+        long AddCalculationRequest(BezierInputParamsValues input);
+        Task<short> GetCalculationRequestStatusIdAsync
+            (int calculationRequestId, int userRequesterId);
+        Task<string> GetFinishedCalculationOutputAsync
+            (int calculationRequestId, int userRequesterId);
     }
 }

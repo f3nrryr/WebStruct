@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStruct", "WebStruct\WebStruct.csproj", "{8D76992F-EAB1-4D09-9F40-55F3B0664B69}"
 EndProject
@@ -47,6 +47,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompModels.Shared.Common", "CompModels.Shared.Common\CompModels.Shared.Common.csproj", "{2E883B86-BA6E-4A6B-A194-553BFF3F1832}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStruct.Shared", "WebStruct.Shared\WebStruct.Shared.csproj", "{C0250594-F005-4C7D-B192-EC14DC32198E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NatureExperiments", "NatureExperiments", "{7930EC3C-7BA6-4E11-9D71-0173F7DAF488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.DAL", "NatureExperiments.DAL\NatureExperiments.DAL.csproj", "{0736F1A9-FE56-47E5-967A-C1CF8517AB5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Repositories", "NatureExperiments.Repositories\NatureExperiments.Repositories.csproj", "{69A79327-2E95-4CE2-96D3-AC7D54F05C79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Services", "NatureExperiments.Services\NatureExperiments.Services.csproj", "{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +118,18 @@ Global
 		{C0250594-F005-4C7D-B192-EC14DC32198E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0250594-F005-4C7D-B192-EC14DC32198E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0250594-F005-4C7D-B192-EC14DC32198E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0736F1A9-FE56-47E5-967A-C1CF8517AB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0736F1A9-FE56-47E5-967A-C1CF8517AB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0736F1A9-FE56-47E5-967A-C1CF8517AB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0736F1A9-FE56-47E5-967A-C1CF8517AB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A79327-2E95-4CE2-96D3-AC7D54F05C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A79327-2E95-4CE2-96D3-AC7D54F05C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A79327-2E95-4CE2-96D3-AC7D54F05C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A79327-2E95-4CE2-96D3-AC7D54F05C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +151,9 @@ Global
 		{0B2BB8E1-4180-43BA-95D5-30A3BD3D8609} = {6CEB0AB2-F2C9-4C4F-A892-7250F1DF53D0}
 		{1A663E3E-53E3-4C24-88AD-AEF9B0E961E9} = {6CEB0AB2-F2C9-4C4F-A892-7250F1DF53D0}
 		{2E883B86-BA6E-4A6B-A194-553BFF3F1832} = {45DD3B6D-F5B3-429E-8D75-F1722EFFB390}
+		{0736F1A9-FE56-47E5-967A-C1CF8517AB5E} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
+		{69A79327-2E95-4CE2-96D3-AC7D54F05C79} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
+		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B75724EE-BFBF-490C-A147-98985D524824}
