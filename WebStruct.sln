@@ -56,6 +56,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Repositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Services", "NatureExperiments.Services\NatureExperiments.Services.csproj", "{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Unit.Tests", "NatureExperiments.Unit.Tests\NatureExperiments.Unit.Tests.csproj", "{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +132,10 @@ Global
 		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -154,6 +160,7 @@ Global
 		{0736F1A9-FE56-47E5-967A-C1CF8517AB5E} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
 		{69A79327-2E95-4CE2-96D3-AC7D54F05C79} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
 		{37EB3A2B-D309-410C-BBE2-C5708E91A3C2} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
+		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438} = {7930EC3C-7BA6-4E11-9D71-0173F7DAF488}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B75724EE-BFBF-490C-A147-98985D524824}
