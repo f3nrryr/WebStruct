@@ -83,7 +83,10 @@ public partial class GenStructContext : DbContext
 
             entity.Property(e => e.Id).UseIdentityAlwaysColumn();
             entity.Property(e => e.CreatedAt).HasColumnType("timestamp without time zone");
+            entity.Property(e => e.Description).IsRequired();
+            entity.Property(e => e.InputParamsJsonExample).IsRequired();
             entity.Property(e => e.Name).IsRequired();
+            entity.Property(e => e.OutputParamsJsonExample).IsRequired();
         });
 
         modelBuilder.Entity<RequestsStatusesHandbook>(entity =>

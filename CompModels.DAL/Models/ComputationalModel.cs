@@ -15,13 +15,13 @@ public partial class ComputationalModel
 
     public bool IsPorousModel { get; set; }
 
-    public bool IsVisible { get; set; }
-
     public DateTime CreatedAt { get; set; }
 
-    public long CreatedBy { get; set; }
+    public string InputParamsJsonExample { get; set; }
 
-    public TimeOnly? LastUpdatedAt { get; set; }
+    public string OutputParamsJsonExample { get; set; }
 
-    public long? LastUpdatedBy { get; set; }
+    public Guid CreatedBy { get; set; }
+
+    public string Description { get; set; }
 }

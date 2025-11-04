@@ -11,5 +11,9 @@ namespace UsersRoles.DAL.CodeFirst
     {
         public string Description { get; set; }
         public ICollection<WebStructRolePermission> RolePermissions { get; set; }
+        public DateTime? LastUpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public Guid CreatedBy { get; set; }
+        public Guid? LastUpdatedBy { get; set; }
     }
 }

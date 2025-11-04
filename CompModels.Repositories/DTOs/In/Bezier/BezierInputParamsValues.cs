@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompModels.Repositories.DTOs.In
+namespace CompModels.Repositories.DTOs.In.Bezier
 {
     public class BezierInputParamsValues : InputParamsValuesBase
     {

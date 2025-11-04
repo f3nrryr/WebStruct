@@ -18,6 +18,9 @@ namespace UsersRoles.DAL.CodeFirst
 
         public DateTime CreatedAt { get; set; }
 
-        public DateTime LastUpdatedAt { get; set; }
+        public DateTime? LastUpdatedAt { get; set; }
+
+        public Guid CreatedBy { get; set; }
+        public Guid? LastUpdatedBy { get; set; }
     }
 }

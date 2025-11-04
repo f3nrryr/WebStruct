@@ -10,14 +10,7 @@ namespace UsersRoles.Repositories.DTOs
     {
         public string Name { get; set; }
         public string Description { get; set; }
-    }
-
-    public class PermissionUpdateModel
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public bool IsActive { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 
     public class PermissionModel
@@ -26,7 +19,7 @@ namespace UsersRoles.Repositories.DTOs
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedAt { get; set; }
-        public bool IsActive { get; set; }
+        public Guid CreatedBy { get; set; }
     }
 
     public class RolePermissionModel

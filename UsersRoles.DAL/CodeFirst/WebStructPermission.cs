@@ -17,7 +17,7 @@ namespace UsersRoles.DAL.CodeFirst
         public ICollection<WebStructRolePermission> RolePermissions { get; set; } = new List<WebStructRolePermission>();
 
         public DateTime CreatedAt { get; set; }
-        public DateTime LastUpdatedAt { get; set; }
-        public bool IsActive { get; set; } = true;
+
+        public Guid CreatedBy { get; set; }
     }
 }

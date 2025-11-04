@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace UsersRoles.DAL.CodeFirst
@@ -16,6 +17,14 @@ namespace UsersRoles.DAL.CodeFirst
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.HasDefaultSchema("users");
+
+            builder.Entity<WebStructUser>().ToTable("AspNetUsers", "users");
+            builder.Entity<WebStructRole>().ToTable("AspNetRoles", "users");
+            builder.Entity<IdentityUserRole<string>>().ToTable("AspNetUserRoles", "users");
+            builder.Entity<IdentityUserClaim<string>>().ToTable("AspNetUserClaims", "users");
+            builder.Entity<IdentityUserLogin<string>>().ToTable("AspNetUserLogins", "users");
+            builder.Entity<IdentityRoleClaim<string>>().ToTable("AspNetRoleClaims", "users");
+            builder.Entity<IdentityUserToken<string>>().ToTable("AspNetUserTokens", "users");
 
             base.OnModelCreating(builder);
 

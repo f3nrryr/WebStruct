@@ -1,5 +1,6 @@
 ﻿using CompModels.CRUD.Services.Interfaces;
 using CompModels.Repositories.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using WebStruct.Contracts;
@@ -14,6 +15,7 @@ namespace WebStruct.Controllers.Calcs
     [Route("api/v1/[controller]/")]
     [ProducesResponseType(typeof(ErrorsDetailResult), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(string), StatusCodes.Status404NotFound)]
+    [Authorize]
     public class ComputationalExperimentsController : ControllerBase
     {
         private readonly ICompExperimentsDataStorageFacade _dataStorageFacadeService;

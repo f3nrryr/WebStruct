@@ -1,6 +1,6 @@
 ﻿using CompModels.CRUD.Services.Interfaces;
 using CompModels.CRUD.Services.Validators;
-using CompModels.Repositories.DTOs.In;
+using CompModels.Repositories.DTOs.In.Bezier;
 using CompModels.Repositories.Interfaces;
 using CompModels.Repositories.Repositories;
 using CompModels.Shared.Common.Enums;

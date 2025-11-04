@@ -8,7 +8,6 @@ namespace UsersRoles.Repositories.Interfaces
         Task<PermissionModel> GetByNameAsync(string name);
         Task<List<PermissionModel>> GetAllAsync();
         Task<PermissionModel> CreateAsync(PermissionCreateModel permission);
-        Task<PermissionModel> UpdateAsync(PermissionUpdateModel permission);
         Task DeleteAsync(int id);
 
         // Управление связями
@@ -23,5 +22,7 @@ namespace UsersRoles.Repositories.Interfaces
         // Групповые операции
         Task AddPermissionsToRoleAsync(string roleId, List<int> permissionIds, Guid grantedBy);
         Task SetRolePermissionsAsync(string roleId, List<int> permissionIds, Guid grantedBy);
+
+        Task<List<RoleModel>> GetRolesWithPermissionAsync(int permissionId);
     }
 }

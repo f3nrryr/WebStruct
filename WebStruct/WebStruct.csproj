@@ -7,17 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Converters\" />
-    <Folder Include="HostedServices\" />
+    <Folder Include="Options\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="8.0.1" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Core" Version="8.0.1" />
+    <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.21" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.14.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="8.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="8.1.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.14.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CompModels.CRUD.Services\CompModels.CRUD.Services.csproj" />
+    <ProjectReference Include="..\UsersRoles.DAL\UsersRoles.DAL.csproj" />
+    <ProjectReference Include="..\UsersRoles.Services\UsersRoles.Services.csproj" />
+    <ProjectReference Include="..\WebStruct.Admin.Contracts\WebStruct.Admin.Contracts.csproj" />
     <ProjectReference Include="..\WebStruct.Contracts\WebStruct.Contracts.csproj" />
   </ItemGroup>
 

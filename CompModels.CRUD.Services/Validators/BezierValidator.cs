@@ -1,5 +1,5 @@
 ﻿using CompModels.Repositories.DTOs;
-using CompModels.Repositories.DTOs.In;
+using CompModels.Repositories.DTOs.In.Bezier;
 using System.Text.Json;
 
 namespace CompModels.CRUD.Services.Validators

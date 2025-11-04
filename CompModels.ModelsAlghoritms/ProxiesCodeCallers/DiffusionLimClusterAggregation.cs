@@ -9,7 +9,7 @@ namespace CompModels.ModelsAlghoritms.ProxiesCodeCallers
 {
     internal class DiffusionLimClusterAggregation : IAlgorithm
     {
-        public Task CalculateAsync(int calculationRequestId)
+        public Task CalculateAsync(long calculationRequestId)
         {
             throw new NotImplementedException();
         }

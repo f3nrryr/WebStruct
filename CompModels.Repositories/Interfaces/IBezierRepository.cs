@@ -1,5 +1,5 @@
-﻿using CompModels.Repositories.DTOs.In;
-using CompModels.Repositories.DTOs.Out;
+﻿using CompModels.Repositories.DTOs.In.Bezier;
+using CompModels.Repositories.DTOs.Out.Bezier;
 using System;
 using System.Collections.Generic;
 using System.Linq;

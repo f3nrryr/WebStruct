@@ -1,6 +1,6 @@
 ﻿using CompModels.DAL.Models;
-using CompModels.Repositories.DTOs.In;
-using CompModels.Repositories.DTOs.Out;
+using CompModels.Repositories.DTOs.In.Bezier;
+using CompModels.Repositories.DTOs.Out.Bezier;
 using CompModels.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;

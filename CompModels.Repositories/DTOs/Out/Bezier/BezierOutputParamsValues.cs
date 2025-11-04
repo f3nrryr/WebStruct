@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CompModels.Repositories.DTOs.Out
+namespace CompModels.Repositories.DTOs.Out.Bezier
 {
     public class BezierOutputParamsValues
     {

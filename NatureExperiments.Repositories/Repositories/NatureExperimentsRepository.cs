@@ -53,7 +53,7 @@ namespace NatureExperiments.Repositories.Repositories
             var experiment = await _context.NatureExperiments.Where(x => x.Id == experimentId).SingleOrDefaultAsync();
 
             if (experiment == null)
-                throw new UsefulException(HttpStatusCode.BadRequest, $"Натурного эксперимента {experimentId} не существует");
+                throw new UsefulException(HttpStatusCode.BadRequest, new string[] { $"Натурного эксперимента {experimentId} не существует" });
 
             experiment.Name = input.Name;
             experiment.Description = input.Description;
