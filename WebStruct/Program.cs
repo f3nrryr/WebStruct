@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning;
+using CompModels.ModelsAlghoritms.Handler;
 using HealthChecks.UI.Client;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.ComponentModel;
 using System.Text;
 using UsersRoles.DAL.CodeFirst;
 using UsersRoles.Repositories.Interfaces;
@@ -17,9 +19,11 @@ using UsersRoles.Services.Enums;
 using UsersRoles.Services.Implementations;
 using UsersRoles.Services.Interfaces;
 using WebStruct.HealthChecks;
+using WebStruct.HostedServices;
 using WebStruct.JWT;
 using WebStruct.MySwagger;
 using WebStruct.RateLimit;
+using WebStruct.Shared;
 
 namespace WebStruct
 {
@@ -34,6 +38,8 @@ namespace WebStruct
 
             // Конфигурация JWT
             builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+
+            builder.Services.Configure<DbConnectionOptions>(builder.Configuration.GetSection("ConnectionStrings"));
 
             // RATE-LIMIT
             builder.Services.AddSingleton<IJwtService, JwtService>();
@@ -176,6 +182,10 @@ namespace WebStruct
             builder.Services.AddTransient<IPermissionsService, PermissionsService>();
             builder.Services.AddTransient<IUsersService, UsersService>();
             builder.Services.AddTransient<IRolesService, RolesService>();
+
+            builder.Services.AddTransient<ICalculateRequestsHandler, CalculateRequestsHandler>();
+
+            builder.Services.AddHostedService<CalculationsHandleWorker>();
 
             var app = builder.Build();
 

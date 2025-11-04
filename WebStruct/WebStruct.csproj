@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CompModels.CRUD.Services\CompModels.CRUD.Services.csproj" />
+    <ProjectReference Include="..\CompModels.ModelsAlghoritms\CompModels.ModelsAlghoritms.csproj" />
     <ProjectReference Include="..\UsersRoles.DAL\UsersRoles.DAL.csproj" />
     <ProjectReference Include="..\UsersRoles.Services\UsersRoles.Services.csproj" />
     <ProjectReference Include="..\WebStruct.Admin.Contracts\WebStruct.Admin.Contracts.csproj" />

@@ -55,7 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Services"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NatureExperiments.Unit.Tests", "NatureExperiments.Unit.Tests\NatureExperiments.Unit.Tests.csproj", "{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchdog", "Watchdog\Watchdog.csproj", "{FE3D0BC8-EA4C-4365-AB21-A2CE0CF8A189}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Watchdog", "Watchdog\Watchdog.csproj", "{62E08DE0-E3E1-6730-14DF-A315C5404494}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,10 +135,10 @@ Global
 		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE2AD503-EFDA-4CEC-AE8D-B72522A97438}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE3D0BC8-EA4C-4365-AB21-A2CE0CF8A189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE3D0BC8-EA4C-4365-AB21-A2CE0CF8A189}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE3D0BC8-EA4C-4365-AB21-A2CE0CF8A189}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE3D0BC8-EA4C-4365-AB21-A2CE0CF8A189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E08DE0-E3E1-6730-14DF-A315C5404494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E08DE0-E3E1-6730-14DF-A315C5404494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E08DE0-E3E1-6730-14DF-A315C5404494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E08DE0-E3E1-6730-14DF-A315C5404494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

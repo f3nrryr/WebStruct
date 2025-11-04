@@ -8,6 +8,6 @@ namespace WebStruct.Shared
 {
     public class DbConnectionOptions
     {
-        public string PG_ConnectionString { get; set; }
+        public string Postgres { get; set; }
     }
 }

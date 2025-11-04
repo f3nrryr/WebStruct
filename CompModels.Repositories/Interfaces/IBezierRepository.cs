@@ -20,5 +20,6 @@ namespace CompModels.Repositories.Interfaces
             (int calculationRequestId, int? userRequesterId = null);
         Task<BezierResponse> GetFinishedCalculationOutputAsync
             (int calculationRequestId, int? userRequesterId = null);
+        Task SetRequestFailedAsync(long calculationRequestId);
     }
 }

@@ -8,5 +8,6 @@ namespace CompModels.ModelsAlghoritms.Handler
 {
     public interface ICalculateRequestsHandler
     {
+        Task HandleAsync();
     }
 }

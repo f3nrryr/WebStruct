@@ -25,7 +25,7 @@ namespace WebStruct.Controllers.CompModelsAndModelsAlgorithms
 
         public ModelsAlgorithmsController(IOptions<DbConnectionOptions> options)
         {
-            _modelsAlgorithmsRepository = new ModelsAlgorithmsRepository(options.Value.PG_ConnectionString);
+            _modelsAlgorithmsRepository = new ModelsAlgorithmsRepository(options.Value.Postgres);
         }
 
         [HttpGet("Handbook")]

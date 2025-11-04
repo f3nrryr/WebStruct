@@ -93,7 +93,7 @@ namespace CompModels.Repositories.Repositories
             var baseQuery = _pgContext.BezierCalculationRequests
                             .Where(x => x.Id == calculationRequestId
                                         &&
-                                        x.RequestStatusId == (short)RequestStatusesEnum.Ready
+                                        x.RequestStatusId == (short)RequestStatusesEnum.Success
                             );
 
             if (userRequesterId.HasValue)
@@ -136,6 +136,7 @@ namespace CompModels.Repositories.Repositories
                 throw new Exception($"ЗАПРОС НЕ НАЙДЕН: {calculationRequestId}");
 
             calcRequest.CalcResultPorosity = calcedPorosity;
+            calcRequest.RequestStatusId = (short)RequestStatusesEnum.Success;
 
             var file = _pgContext
                        .BezierResultsPhysicalFiles
@@ -153,6 +154,21 @@ namespace CompModels.Repositories.Repositories
                                       ExperimentId = calculationRequestId,
                                       File = file.Entity
                                   });
+
+            await _pgContext.SaveChangesAsync();
+        }
+
+        public async Task SetRequestFailedAsync(long calculationRequestId)
+        {
+            var calcRequest = await _pgContext.BezierCalculationRequests
+                              .Where
+                              (x => x.Id == calculationRequestId)
+                              .SingleOrDefaultAsync();
+            if (calcRequest == null)
+                //todo??? custom ex???
+                throw new Exception($"ЗАПРОС НЕ НАЙДЕН: {calculationRequestId}");
+
+            calcRequest.RequestStatusId = (short)RequestStatusesEnum.Error;
 
             await _pgContext.SaveChangesAsync();
         }

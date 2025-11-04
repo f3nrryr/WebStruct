@@ -27,12 +27,16 @@ namespace CompModels.ModelsAlghoritms.ProxiesCodeCallers
             //CPU-bound operation for thread from thread-pool:
             var result = await Task.Run(() =>
             {
-                return "1"; // TODO: вызов класса и метода Calculate модели из Nuget.
+                return new
+                {
+                    CalcedPorosity = 0,
+                    PhysicalFile = new object()
+                }; // TODO: вызов класса и метода Calculate модели из Nuget.
             });
 
-            //await bezierRepository
-            //      .FinishCalculationRequestAsync
-            //      (calculationRequestId, result.CalcedPoroisty, result.PhysicalFile);
+            await bezierRepository
+                  .FinishCalculationRequestAsync
+                  (calculationRequestId, result.CalcedPorosity, (WebStruct.Shared.PhysicalFile)result.PhysicalFile);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace CompModels.CRUD.Services.Services
                     if (errors.Length > 0)
                         throw new UsefulException(HttpStatusCode.BadRequest, errors);
 
-                    calculationRequestId = new BezierRepository(_dbConnections.PG_ConnectionString).AddCalculationRequest(bezierModelInput);
+                    calculationRequestId = new BezierRepository(_dbConnections.Postgres).AddCalculationRequest(bezierModelInput);
 
                     break;
 
@@ -67,7 +67,7 @@ namespace CompModels.CRUD.Services.Services
             {
                 case AlgorithmsEnum.Bezier:
 
-                    calculationRequestId = await new BezierRepository(_dbConnections.PG_ConnectionString)
+                    calculationRequestId = await new BezierRepository(_dbConnections.Postgres)
                                            .GetCalculationRequestStatusIdAsync
                                            (calculationRequestId, userRequesterId);
 
@@ -86,13 +86,13 @@ namespace CompModels.CRUD.Services.Services
         {
             string resultInputAndOutputJSON = string.Empty;
 
-            var modelsAlgorithmsRepository = new ModelsAlgorithmsRepository(_dbConnections.PG_ConnectionString);
+            var modelsAlgorithmsRepository = new ModelsAlgorithmsRepository(_dbConnections.Postgres);
             var modelNameById = await modelsAlgorithmsRepository.GetModelNameByIdAsync(compModelId);
             switch ((AlgorithmsEnum)compModelId)
             {
                 case AlgorithmsEnum.Bezier:
 
-                    var bezierInputOutput = await new BezierRepository(_dbConnections.PG_ConnectionString)
+                    var bezierInputOutput = await new BezierRepository(_dbConnections.Postgres)
                                             .GetFinishedCalculationOutputAsync
                                             (calculationRequestId, userRequesterId);
 

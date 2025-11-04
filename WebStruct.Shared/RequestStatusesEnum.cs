@@ -10,7 +10,7 @@ namespace WebStruct.Shared
     {
         New = 1,
         InWork = 2,
-        Ready = 3,
+        Success = 3,
         Error = 4
     }
 }

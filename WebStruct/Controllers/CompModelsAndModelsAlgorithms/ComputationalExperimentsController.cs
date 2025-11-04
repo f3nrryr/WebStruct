@@ -42,7 +42,7 @@ namespace WebStruct.Controllers.CompModelsAndModelsAlgorithms
                                      
                                      ==
                                      
-                                     (short)RequestStatusesEnum.Ready
+                                     (short)RequestStatusesEnum.Success
                                      
                                      ;
 
@@ -115,7 +115,7 @@ namespace WebStruct.Controllers.CompModelsAndModelsAlgorithms
             ([FromHeader] Guid traceId)
         {
             //TODO: cold start for handbooks. scripts or orm code-first.
-            var requestStatusesRepository = new RequestStatusesRepository(_dbConnectionOptions.PG_ConnectionString);
+            var requestStatusesRepository = new RequestStatusesRepository(_dbConnectionOptions.Postgres);
 
             return Ok(await requestStatusesRepository.GetAsync());
         }
