@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -16,9 +17,9 @@ namespace WebStruct.JWT
     {
         private readonly JwtSettings _jwtSettings;
 
-        public JwtService(JwtSettings jwtSettings)
+        public JwtService(IOptions<JwtSettings> jwtSettings)
         {
-            _jwtSettings = jwtSettings;
+            _jwtSettings = jwtSettings.Value;
         }
 
         public string GenerateToken(WebStructUser user, IList<string> roles)

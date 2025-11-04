@@ -4,6 +4,7 @@ using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -27,6 +28,9 @@ namespace WebStruct
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Configuration.AddJsonFile("jwt.json", optional: false, reloadOnChange: false);
+            builder.Configuration.AddJsonFile("connectionStrings.json", optional: false, reloadOnChange: false);
 
             // Конфигурация JWT
             builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
@@ -134,6 +138,10 @@ namespace WebStruct
 
             builder.Services.AddHealthChecks()
                             .AddCheck<CalculationsStatusesHealthCheck>("Выполнение запрошенных пользователями расчётов");
+
+            //WEBSTRUCTOCNTEXT = USERS-ROLES-PERMISSIONS.
+            builder.Services.AddDbContext<WebStructContext>
+                (options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // ASP NET IDENTITY USERS-ROLES
             builder.Services.AddIdentity<WebStructUser, WebStructRole>(options =>

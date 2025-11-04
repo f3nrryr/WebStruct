@@ -7,7 +7,7 @@ using WebStruct.Contracts;
 using WebStruct.Contracts.ComputationalExperiments;
 using WebStruct.Shared;
 
-namespace WebStruct.Controllers.Calcs
+namespace WebStruct.Controllers.CompModelsAndModelsAlgorithms
 {
     /// <summary>
     /// Создать заявку на расчёт. Получить статус заявки на расчёт. Получить результат готового расчёта. КОНКРЕТНЫЕ расчёты.

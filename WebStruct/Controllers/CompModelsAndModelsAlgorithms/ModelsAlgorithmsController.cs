@@ -8,7 +8,7 @@ using WebStruct.Contracts;
 using WebStruct.Contracts.ModelsAlgorithms;
 using WebStruct.Shared;
 
-namespace WebStruct.Controllers.Calcs
+namespace WebStruct.Controllers.CompModelsAndModelsAlgorithms
 {
     /// <summary>
     /// Справка о комп. моделях. Их параметры и т.п. в json'ах для фронтенда. 
